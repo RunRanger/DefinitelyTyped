@@ -264,7 +264,6 @@ const disabledOptions: MUIDataTableOptions = {
 
 <MuiCustomTable title="Disabled Buttons" data={Todos} options={disabledOptions} />;
 
-
 const MuiTheme = createTheme({
     components: {
         MUIDataTable: {
@@ -276,8 +275,6 @@ const MuiTheme = createTheme({
         },
     },
 });
-
-
 
 <Popover
     classes={{ icon: 'icon_class' }}

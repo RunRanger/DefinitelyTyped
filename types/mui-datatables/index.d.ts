@@ -1,4 +1,3 @@
-// TypeScript Version: 3.5
 // Type definitions for mui-datatables 3.7
 // Project: https://github.com/gregnb/mui-datatables
 // Definitions by: Jeroen "Favna" Claassens <https://github.com/favna>
@@ -8,6 +7,7 @@
 //                 Byron "Byrekt" Mitchell <https://github.com/byrekt>
 //                 Bohdan Yavorskyi <https://github.com/BohdanYavorskyi>
 //                 Patrick Erichsen <https://github.com/Patrick-Erichsen>
+//                 RunRanger <https://github.com/RunRanger>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 3.5
 import * as React from 'react';
@@ -1147,7 +1147,6 @@ export const TableToolbarSelect: React.ComponentType<MUIDataTableToolbarSelect>;
 export const TableViewCol: React.ComponentType<MUIDataTableViewCol>;
 export const DebounceTableSearch: React.ComponentType<DebouncedMUIDataTableSearch>;
 
-
 // Plugins
 /**
  * Function that returns a function for the customSearchRender method. This plug-in allows you to create a debounced search which can be useful for server-side tables and tables with large data sets.
@@ -1160,7 +1159,6 @@ export function debounceSearchRender(debounceWait?: number): MUIDataTableOptions
 export default MUIDataTable;
 
 declare module '@mui/material/styles' {
-
     interface Components {
         MUIDataTable?: {
             styleOverrides?: {
@@ -1355,55 +1353,5 @@ declare module '@mui/material/styles' {
                 title?: any;
             };
         };
-    }
-    interface ComponentNameToClassKey {
-
-        MUIDataTableResize: 'root' | 'resizer';
-
-        MUIDataTableSearch: 'clearIcon' | 'main' | 'searchIcon' | 'searchText';
-
-        MUIDataTableSelectCell:
-        | 'root'
-        | 'checkboxRoot'
-        | 'checked'
-        | 'disabled'
-        | 'expandDisabled'
-        | 'expanded'
-        | 'fixedHeader'
-        | 'fixedLeft'
-        | 'headerCell'
-        | 'hide'
-        | 'icon';
-
-        MUIDataTableToolbar:
-        | 'root'
-        | '@media screen and (max-width: 480px)'
-        | "[theme.breakpoints.down('sm')]"
-        | "[theme.breakpoints.down('xs')]"
-        | 'actions'
-        | 'filterCloseIcon'
-        | 'filterPaper'
-        | 'fullWidthActions'
-        | 'fullWidthLeft'
-        | 'fullWidthRoot'
-        | 'fullWidthTitleText'
-        | 'icon'
-        | 'iconActive'
-        | 'left'
-        | 'searchIcon'
-        | 'titleRoot'
-        | 'titleText';
-
-        MUIDataTableToolbarSelect: 'root' | 'deleteIcon' | 'iconButton' | 'title';
-
-        MUIDataTableViewCol:
-        | 'root'
-        | 'checkbox'
-        | 'checkboxRoot'
-        | 'checked'
-        | 'formControl'
-        | 'formGroup'
-        | 'label'
-        | 'title';
     }
 }
