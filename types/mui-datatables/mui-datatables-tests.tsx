@@ -11,7 +11,7 @@ import { Checkbox, Radio } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 interface Props extends Omit<MUIDataTableProps, 'columns'> {
-    columns?: MUIDataTableColumn[] | undefined;
+    columns?: MUIDataTableColumn[];
 }
 
 const MuiCustomTable: React.FC<React.PropsWithChildren<Props>> = props => {

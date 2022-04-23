@@ -1,3 +1,4 @@
+// TypeScript Version: 3.5
 // Type definitions for mui-datatables 3.7
 // Project: https://github.com/gregnb/mui-datatables
 // Definitions by: Jeroen "Favna" Claassens <https://github.com/favna>
@@ -9,8 +10,6 @@
 //                 Patrick Erichsen <https://github.com/Patrick-Erichsen>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 3.5
-
-import '@mui/material/styles';
 import * as React from 'react';
 
 export type Display = boolean | 'true' | 'false' | 'excluded';
