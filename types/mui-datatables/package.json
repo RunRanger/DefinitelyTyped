@@ -1,6 +1,6 @@
 {
     "private": true,
     "dependencies": {
-        "@mui/material": "^5.x.x"
+
     }
 }
