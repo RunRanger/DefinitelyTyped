@@ -368,7 +368,8 @@ const awsServerless: Aws.Serverless = {
         },
         eventBridge: {
             useCloudFormation: true
-        }
+        },
+        layers: ['arn:aws:lambda:us-east-2:451483290750:layer:NewRelicNodeJS14X:45']
     },
     package: {
         include: ['testinclude'],
@@ -555,7 +556,53 @@ const awsServerless: Aws.Serverless = {
                         batchSize: 1,
                         maximumRetryAttempts: 1,
                         enabled: true,
-                        functionResponseType: 'ReportBatchItemFailures'
+                        functionResponseType: 'ReportBatchItemFailures',
+                        filterPatterns: [
+                            {
+                                UserID: [null]
+                            },
+                            {
+                                LastName: ['']
+                            },
+                            {
+                                Name: ['Alice']
+                            },
+                            {
+                                Location: ['New York'],
+                                Day: ['Monday']
+                            },
+                            {
+                                PaymentType: ['Credit', 'Debit']
+                            },
+                            {
+                                Weather: [
+                                    {
+                                        'anything-but': ['Raining']
+                                    }
+                                ]
+                            },
+                            {
+                                Price: [
+                                    {
+                                        numeric: [ '=', 100 ]
+                                    }
+                                ]
+                            },
+                            {
+                                ProductName: [
+                                    {
+                                        exists: true
+                                    }
+                                ]
+                            },
+                            {
+                                Region: [
+                                    {
+                                        prefix: 'us-'
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 }, {
                     activemq: {
