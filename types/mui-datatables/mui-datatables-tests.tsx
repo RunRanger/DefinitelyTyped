@@ -7,8 +7,6 @@ import MUIDataTable, {
     Popover,
 } from 'mui-datatables';
 import * as React from 'react';
-import { Checkbox, Radio } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
 
 interface Props extends Omit<MUIDataTableProps, 'columns'> {
     columns?: MUIDataTableColumn[];
@@ -237,9 +235,9 @@ const CustomCheckbox = (props: MUIDataTableCheckboxProps) => {
     const newProps = { ...props };
     newProps.color = props['data-description'] === 'row-select' ? 'secondary' : 'primary';
     if (props['data-description'] === 'row-select') {
-        return <Radio {...newProps} />;
+        return null;
     } else {
-        return <Checkbox {...newProps} />;
+        return null;
     }
 };
 
@@ -264,18 +262,6 @@ const disabledOptions: MUIDataTableOptions = {
 };
 
 <MuiCustomTable title="Disabled Buttons" data={Todos} options={disabledOptions} />;
-
-const MuiTheme = createTheme({
-    components: {
-        MUIDataTable: {
-            styleOverrides: {
-                root: {
-                    fontWeight: 300,
-                }
-            }
-        },
-    },
-});
 
 <Popover
     classes={{ icon: 'icon_class' }}
